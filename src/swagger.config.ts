@@ -4,9 +4,9 @@ const options: Options = {
     definition: {
         openapi: '3.0.0',
         info: {
-            title: 'Weather API',
+            title: 'Weather API(express_meteo)',
             version: '1.0.0',
-            description: 'A simple Weather API',
+            description: 'A simple Weather API, that use [OpenWeatherMap API](https://openweathermap.org/api)',
         },
         servers: [
             {

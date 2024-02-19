@@ -72,15 +72,6 @@ const WeatherSchema: Schema = new Schema({
     versionKey: false,
 });
 
-WeatherSchema.pre<IWeatherData>('save', function(next) {
-    this.main.temp = this.main.temp - 273.15;
-    this.main.feels_like = this.main.feels_like - 273.15;
-    this.main.temp_min = this.main.temp_min - 273.15;
-    this.main.temp_max = this.main.temp_max - 273.15;
-
-    next();
-});
-
 const WeatherDataModel = mongoose.model<IWeatherData>('WeatherData', WeatherSchema);
 
 export { WeatherDataModel, IWeatherData };

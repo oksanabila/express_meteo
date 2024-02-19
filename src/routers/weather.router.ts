@@ -92,29 +92,29 @@ const router = express.Router();
  *   get:
  *     tags:
  *       - Weather
- *     summary: Retrieve weather information
- *     description: Returns weather information for a specified location.
+ *     summary: Weather information operations
+ *     description: Returns weather information for a specified location. You can fill out 'lat' and 'lon' or only 'city' parameter
  *     parameters:
  *       - in: query
  *         name: city
  *         required: false
  *         schema:
  *           type: string
- *         description: The name of the city to get weather information for.
+ *         description: The name of the city.
  *       - in: query
  *         name: lat
  *         required: false
  *         schema:
  *           type: number
  *           format: double
- *         description: The latitude part of the location to get weather for.
+ *         description: The latitude part of the location.
  *       - in: query
  *         name: lon
  *         required: false
  *         schema:
  *           type: number
  *           format: double
- *         description: The longitude part of the location to get weather for.
+ *         description: The longitude part of the location.
  *     responses:
  *       200:
  *         description: Successful response with the weather information.

@@ -1,6 +1,9 @@
 import express from 'express';
 import { PORT } from './configs/config';
 import router from "./routers/weather.router";
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 

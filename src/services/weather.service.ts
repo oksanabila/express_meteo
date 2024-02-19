@@ -11,7 +11,8 @@ export async function getWeatherByCoordinates(lon: number, lat: number): Promise
             throw new ApiError('Invalid coordinates provided', 400);
         }
 
-        const url = `${BASE_URL}/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKEY}`;
+        const url = `${BASE_URL}/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${APIKEY}`;
+        console.log(url);
         const response = await axios.get(url);
 
         const result = new WeatherDataModel(response.data);
